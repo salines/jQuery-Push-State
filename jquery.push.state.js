@@ -74,7 +74,7 @@
                     self._debug(event.state);
                     self._load(event.state.href, false);
                 }else {
-                    location.reload();
+                    //location.reload();
                 }
             }; 
 
