@@ -1,4 +1,5 @@
-[JQuery push-state plugin]
+JQuery push-state plugin
+=================
 
 this plugin enable html5 push state in your web site
 
