@@ -29,7 +29,7 @@
             alert("error while loading page \"" + href +"\"");
         },
         ignore: function(link, elem) {
-        	return (link && ( link.match("^http")=="http" || link.charAt(0) == "#" ));
+            return (link && ( link.match("^http")=="http" || link.charAt(0) == "#" ));
         }
     };
 
@@ -62,20 +62,17 @@
                 return false;
             });
 
-            var popped = ('state' in window.history) && window.history.state !== null, initialURL = location.href;
             window.onpopstate = function(event) {
-              
-              // Ignore inital popstate that some browsers fire on page load
-              var initialPop = !popped && location.href == initialURL
-              popped = true
-              if ( initialPop ) return
 
-                if(event.state) {
-                    self._debug(event.state);
-                    self._load(event.state.href, false);
-                }else {
-                    //location.reload();
+              if(event.state) {
+                self._debug(event.state);
+                self._load(event.state.href, false);
+              }else {
+                if(!$.browser.webkit) { //webkit implement onpopstate in different mode: call it on page load :(
+                  location.reload();
                 }
+              }
+              
             }; 
 
             
