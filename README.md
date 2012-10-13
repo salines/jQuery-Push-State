@@ -1,7 +1,7 @@
 JQuery push-state plugin
 =================
 
-this plugin enable html5 push state in your web site
+Enable the new push-state navigation in your web site
 
 docs on: http://www.antoniosalvati.it/jquery-push-state
 
