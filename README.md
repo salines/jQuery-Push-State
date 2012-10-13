@@ -3,6 +3,8 @@ JQuery push-state plugin
 
 this plugin enable html5 push state in your web site
 
+docs on: http://www.antoniosalvati.it/jquery-push-state
+
 Copyright and license
 ---------------------
 
