@@ -68,7 +68,7 @@
                 self._debug(event.state);
                 self._load(event.state.href, false);
               }else {
-                if(!$.browser.webkit) { //webkit implement onpopstate in different mode: call it on page load :(
+                if(!(/webkit/i.test(window.navigator.userAgent))) { //webkit implement onpopstate in different mode: call it on page load :(
                   location.reload();
                 }
               }
